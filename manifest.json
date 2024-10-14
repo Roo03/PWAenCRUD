@@ -1,0 +1,12 @@
+{
+  "name": "Mi CRUD PWA",
+  "short_name": "PWA",
+  "description": "Un CRUD convertido en una PWA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "lang":"es-CO"
+  
+
+}
