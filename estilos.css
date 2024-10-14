@@ -1,9 +1,9 @@
+/* Estilos básicos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     background-color: rgb(112, 137, 116);
@@ -26,8 +26,8 @@ body {
     height: calc(100vh - 100px);
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se adapten */
 }
-
 
 .contenedor .div-formulario {
     width: 30%;
@@ -65,12 +65,11 @@ body {
     margin: 10px 10px;
 }
 
-/* ESTILOS LISTADO */
 .contenedor .div-listado {
     width: 55%;
     height: calc(100% - 50px);
     margin: 15px 15px;
-    background-color:  rgb(73, 121, 121);
+    background-color: rgb(73, 121, 121);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,4 +119,55 @@ hr {
 
 .btn-eliminar {
     background-color: red;
+}
+
+/* Media Queries para hacer responsiva la página */
+
+/* Para pantallas más pequeñas (como teléfonos) */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor .div-formulario {
+        width: 90%;
+        height: auto;
+    }
+
+    .contenedor .div-listado {
+        width: 90%;
+        height: auto;
+    }
+
+    .contenedor .div-formulario form input,
+    .contenedor .div-formulario form button {
+        width: 80%;
+    }
+
+    .contenedor .div-listado .div-empleados p {
+        font-size: 0.9em;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .contenedor .div-formulario h2,
+    .contenedor .div-listado h2 {
+        font-size: 1.5em;
+    }
+
+    .contenedor .div-formulario form input,
+    .contenedor .div-formulario form button {
+        width: 90%;
+        padding: 8px;
+    }
+
+    .contenedor .div-listado .div-empleados p {
+        font-size: 0.8em;
+    }
+
+    .btn {
+        padding: 5px 7px;
+    }
 }
